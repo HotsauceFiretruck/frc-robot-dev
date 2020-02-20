@@ -33,5 +33,6 @@ public class ObjectDetectionSystem {
         SmartDashboard.putNumber("LimelightX", x);
         SmartDashboard.putNumber("LimelightY", y);
         SmartDashboard.putNumber("LimelightArea", area);
+        SmartDashboard.putNumber("Valid Target", validTarget);
     }
 }
