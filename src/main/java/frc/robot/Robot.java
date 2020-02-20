@@ -21,17 +21,16 @@ import frc.robot.subsystems.SolenoidSystem;
 */
 public class Robot extends TimedRobot 
 {
-  ColorMotorSystem colorMotorSystem;
-  ObjectDetectionSystem objectDetectionSystem;
-  DriveSystem driveSystem;
+  // ColorMotorSystem colorMotorSystem;
+  // ObjectDetectionSystem objectDetectionSystem;
+  // DriveSystem driveSystem;
 
   @Override
   public void robotInit() 
   {
 
-    objectDetectionSystem = new ObjectDetectionSystem();
-    colorMotorSystem = new ColorMotorSystem();
-    // solenoidSystem = new SolenoidSystem();
+    // objectDetectionSystem = new ObjectDetectionSystem();
+    // colorMotorSystem = new ColorMotorSystem();
   }
 
   //An automatic update method, provided by WPILIB
@@ -41,9 +40,9 @@ public class Robot extends TimedRobot
   {
     OI.update();
 
-    // driveSystem.update();
-   // colorMotorSystem.update();
-    // solenoidSystem.update();
-    objectDetectionSystem.update();
+    DriveSystem.update();
+    // colorMotorSystem.update();
+    SolenoidSystem.update();
+    // objectDetectionSystem.update();
   }
 }
