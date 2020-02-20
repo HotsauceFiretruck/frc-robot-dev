@@ -13,6 +13,7 @@ import frc.robot.subsystems.ObjectDetectionSystem;
 import frc.robot.subsystems.ColorMotorSystem;
 import frc.robot.subsystems.DriveSystem;
 import frc.robot.subsystems.SolenoidSystem;
+import frc.robot.subsystems.BrosiusIsAMotor;
 
 /*
   The Robot Class.
@@ -24,6 +25,7 @@ public class Robot extends TimedRobot
   // ColorMotorSystem colorMotorSystem;
   // ObjectDetectionSystem objectDetectionSystem;
   // DriveSystem driveSystem;
+  BrosiusIsAMotor bruhMomento;
 
   @Override
   public void robotInit() 
@@ -31,6 +33,7 @@ public class Robot extends TimedRobot
 
     // objectDetectionSystem = new ObjectDetectionSystem();
     // colorMotorSystem = new ColorMotorSystem();
+    bruhMomento = new BrosiusIsAMotor();
   }
 
   //An automatic update method, provided by WPILIB
@@ -44,5 +47,7 @@ public class Robot extends TimedRobot
     // colorMotorSystem.update();
     SolenoidSystem.update();
     // objectDetectionSystem.update();
+
+    bruhMomento.update();
   }
 }
