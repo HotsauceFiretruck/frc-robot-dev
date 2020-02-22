@@ -13,7 +13,7 @@ public class BrosiusIsAMotor {
   private CANSparkMax broMo;
 
   public BrosiusIsAMotor() {
-    broMo = new CANSparkMax(8, MotorType.kBrushless);
+    broMo = new CANSparkMax(0, MotorType.kBrushless);
   }
   
   public void update() {

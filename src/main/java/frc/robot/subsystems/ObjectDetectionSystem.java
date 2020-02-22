@@ -50,7 +50,7 @@ public class ObjectDetectionSystem {
             area <= 3 && area >= 0.03 &&          
             validTarget == 1.0) {
             System.out.println("Target within bounds.\n");
-            DriveSystem.moveWheels(SPEED, SPEED);
+            DriveSystem.moveWheels(SPEED, -SPEED);
         } else {
             System.out.println("Target outside of bounds.\n");
             DriveSystem.stopWheels();
@@ -59,12 +59,12 @@ public class ObjectDetectionSystem {
         if (xDistFromCH > turnDifference && validTarget == 1.0) {
             ballPosition = "Right";
             System.out.println("Ball's Position: " + ballPosition);
-            DriveSystem.moveWheels(SPEED * .66, -SPEED * .66);
+            DriveSystem.moveWheels(-SPEED * .66, -SPEED * .66);
         }
         if (xDistFromCH < -turnDifference && validTarget == 1.0) {
             ballPosition = "Left";
             System.out.println("Ball's Position: " + ballPosition);
-            DriveSystem.moveWheels(-SPEED * .66, SPEED * .66);
+            DriveSystem.moveWheels(SPEED * .66, SPEED * .66);
         } 
         if (xDistFromCH < -turnDifference &&
             xDistFromCH > turnDifference && 
