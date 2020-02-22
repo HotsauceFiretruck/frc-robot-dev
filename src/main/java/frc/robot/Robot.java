@@ -14,6 +14,7 @@ import frc.robot.subsystems.ColorMotorSystem;
 import frc.robot.subsystems.DriveSystem;
 import frc.robot.subsystems.SolenoidSystem;
 import frc.robot.subsystems.BrosiusIsAMotor;
+import frc.robot.subsystems.Shooter;
 
 /*
   The Robot Class.
@@ -31,7 +32,7 @@ public class Robot extends TimedRobot
   public void robotInit() 
   {
 
-    objectDetectionSystem = new ObjectDetectionSystem();
+   // objectDetectionSystem = new ObjectDetectionSystem();
     // colorMotorSystem = new ColorMotorSystem();
     // bruhMomento = new BrosiusIsAMotor();
   }
@@ -43,11 +44,10 @@ public class Robot extends TimedRobot
   {
     OI.update();
 
-    // DriveSystem.update();
-    // colorMotorSystem.update();
-    // SolenoidSystem.update();
-    objectDetectionSystem.update();
-
+    DriveSystem.update();
+        
+    //objectDetectionSystem.update();
+    Shooter.update();
     // bruhMomento.update();
   }
 }

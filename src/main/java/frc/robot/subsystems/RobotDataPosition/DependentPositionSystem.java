@@ -48,13 +48,13 @@ public class DependentPositionSystem {
               of the field and do the calculation in accordance to that field.
             - But this will require EFFORT and MENTAL STABILITY.
         */
-        double[] relativePosition = getRelativePosition(direction, distance);
+        double[] relativePosition = getRelativePosition(direction, encoder1.getDistance());
         previousGlobalPosition[0] = currentGlobalPosition[0] = previousGlobalPosition[0] + relativePosition[0];
         previousGlobalPosition[1] = currentGlobalPosition[1] = previousGlobalPosition[1] + relativePosition[1];
 
         encoder1.reset();
         encoder2.reset();
-        
+
         return currentGlobalPosition;
     }
 

@@ -29,10 +29,10 @@ public class DriveSystem
 
     public static void moveWheels(double leftSpeed, double rightSpeed)
     {
-        leftSpeed = -leftSpeed;
+        double trueLeft = -leftSpeed;
         Debug.printOnce("moveWheels: Hello");
-        wheelsMotor2.tankDrive(leftSpeed, rightSpeed);
-        wheelsMotor1.tankDrive(leftSpeed, rightSpeed);
+        wheelsMotor2.tankDrive(trueLeft, rightSpeed);
+        wheelsMotor1.tankDrive(trueLeft, rightSpeed);
     }
 
     public static void stopWheels()
