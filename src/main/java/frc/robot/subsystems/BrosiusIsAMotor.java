@@ -11,12 +11,24 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class BrosiusIsAMotor {
   private CANSparkMax broMo;
+  private CANSparkMax broMo2;
+
 
   public BrosiusIsAMotor() {
-    broMo = new CANSparkMax(0, MotorType.kBrushless);
+    broMo = new CANSparkMax(2, MotorType.kBrushless);
+    broMo2 = new CANSparkMax(3, MotorType.kBrushless);
+
   }
   
   public void update() {
-      broMo.set(.5);
+      if (OI.INTAKE_BUTTON.isHold()) {
+        System.out.println("Hello");
+        broMo.set(.25);
+        broMo2.set(-.25);
+      } else {
+        broMo.set(0);
+        broMo2.set(0);
+      }
+
   }
 }
