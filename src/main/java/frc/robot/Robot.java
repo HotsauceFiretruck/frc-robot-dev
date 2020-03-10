@@ -34,7 +34,7 @@ public class Robot extends TimedRobot
 
    // objectDetectionSystem = new ObjectDetectionSystem();
     // colorMotorSystem = new ColorMotorSystem();
-   bruhMomento = new BrosiusIsAMotor();
+    bruhMomento = new BrosiusIsAMotor();
     
   }
 
@@ -46,7 +46,7 @@ public class Robot extends TimedRobot
     OI.update();
 
     DriveSystem.update();
-    //ShooterSystem.update();
+    ShooterSystem.update();
     //objectDetectionSystem.update();
     bruhMomento.update();  
     SolenoidSystem.update();
