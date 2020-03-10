@@ -24,6 +24,9 @@ public class OI {
     public static final Button PNEU_FORWARD_BUTTON = new Button(COLOR_STICK, 6);
     public static final Trigger PNEU_BACKWARD_BUTTON = new Trigger(COLOR_STICK, 3);
 
+    public static final Button INTAKE_BUTTON = new Button(RIGHT_STICK, 2);
+    public static final Button SHOOT_BUTTON = new Button(COLOR_STICK, 5);
+
     //Since index starts at 0, using the codes above as index needs to subtract 1.
     private static Button[] buttons = new Button[]
     {
@@ -34,7 +37,9 @@ public class OI {
         NEXT_BUTTON,
         PREVIOUS_BUTTON,
         PNEU_FORWARD_BUTTON,
-        PNEU_BACKWARD_BUTTON
+        PNEU_BACKWARD_BUTTON,
+        SHOOT_BUTTON,
+        INTAKE_BUTTON
     };
 
     //Getting the inputs of the joystick and update the variables

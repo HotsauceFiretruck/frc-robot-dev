@@ -27,7 +27,7 @@ enum MotorStatus
 */
 public class ColorMotorSystem
 {
-    private final SpeedController COLOR_MOTOR = new PWMVictorSPX(4);
+    private final SpeedController COLOR_MOTOR = new PWMVictorSPX(7);
     private final ColorDetectionSystem COLOR_DETECTION = new ColorDetectionSystem();
     private final int COLOR_AMOUNT = 8;
 

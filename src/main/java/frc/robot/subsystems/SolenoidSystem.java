@@ -10,7 +10,6 @@ import frc.robot.controls.OI;
 public class SolenoidSystem 
 {
     private static final DoubleSolenoid SOLENOID = new DoubleSolenoid(0, 1);
-    private static final SpeedController SOLENOID_CONTROL_MOTOR = new PWMVictorSPX(7);
 
     // Send the solenoid forward
     public static void forward() 
@@ -34,7 +33,6 @@ public class SolenoidSystem
         if (OI.COLOR_STICK.getPOV() == 0)
         {
             Debug.printOnce(": " + OI.COLOR_STICK.getPOV());
-            SOLENOID_CONTROL_MOTOR.set(.5);
         } 
         // if (OI.colorStick.getPOV() == 180) 
         // {

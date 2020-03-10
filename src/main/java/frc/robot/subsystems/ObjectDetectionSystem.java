@@ -38,7 +38,6 @@ public class ObjectDetectionSystem {
         tShort = tshort.getDouble(0.0);
         tLong = tlong.getDouble(0.0);
 
-        //post to smart dashboard periodically
         Debug.printOnce("LimelightX: " + xDistFromCH +
                      "\n LimelightY: " + yDistFromCH + 
                      "\n Target Area %: " + area +
@@ -51,7 +50,7 @@ public class ObjectDetectionSystem {
             area <= 3 && area >= 0.03 &&          
             validTarget == 1.0) {
             System.out.println("Target within bounds.\n");
-            DriveSystem.moveWheels(SPEED, SPEED);
+            DriveSystem.moveWheels(SPEED, -SPEED);
         } else {
             System.out.println("Target outside of bounds.\n");
             DriveSystem.stopWheels();
@@ -60,12 +59,12 @@ public class ObjectDetectionSystem {
         if (xDistFromCH > turnDifference && validTarget == 1.0) {
             ballPosition = "Right";
             System.out.println("Ball's Position: " + ballPosition);
-            DriveSystem.moveWheels(SPEED * .66, -SPEED * .66);
+            DriveSystem.moveWheels(-SPEED * .66, -SPEED * .66);
         }
         if (xDistFromCH < -turnDifference && validTarget == 1.0) {
             ballPosition = "Left";
             System.out.println("Ball's Position: " + ballPosition);
-            DriveSystem.moveWheels(-SPEED * .66, SPEED * .66);
+            DriveSystem.moveWheels(SPEED * .66, SPEED * .66);
         } 
         if (xDistFromCH < -turnDifference &&
             xDistFromCH > turnDifference && 
@@ -74,6 +73,5 @@ public class ObjectDetectionSystem {
             System.out.println("Ball's Position: " + ballPosition);
             DriveSystem.stopWheels();
         }
-        
     }
 }
