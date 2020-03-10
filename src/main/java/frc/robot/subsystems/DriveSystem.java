@@ -16,8 +16,8 @@ public class DriveSystem
     DifferentialDrive is a class that makes running the two motors together easier.
     If you want to know more, maybe consider reading the frc wpilib documentation to know more.
     */
-    private static final DifferentialDrive wheelsMotor1 = new DifferentialDrive(new PWMVictorSPX(2), new PWMVictorSPX(0));
-    private static final DifferentialDrive wheelsMotor2 = new DifferentialDrive(new PWMVictorSPX(3), new PWMVictorSPX(1)); 
+    private static final DifferentialDrive wheelsMotor1 = new DifferentialDrive(new PWMVictorSPX(2), new PWMVictorSPX(1));
+    private static final DifferentialDrive wheelsMotor2 = new DifferentialDrive(new PWMVictorSPX(3), new PWMVictorSPX(0)); 
     private static double leftSpeed = 0;
     private static double rightSpeed = 0;
     private static final double SPEED_MULTIPLIER = 1;
@@ -25,7 +25,8 @@ public class DriveSystem
     //Pretty obvious what this function does. Run this in the Robot.java teleopPeriodic() function to run the robot.
     public static void update()
     {
-        System.out.println("Driving! ");
+        System.out.println("Right Stick + " + OI.RIGHT_STICK.getY());
+        System.out.println("Left Stick + " + OI.LEFT_STICK.getY());
         moveWheels(-OI.LEFT_STICK.getY() * SPEED_MULTIPLIER, -OI.RIGHT_STICK.getY() * SPEED_MULTIPLIER);
     }
 
