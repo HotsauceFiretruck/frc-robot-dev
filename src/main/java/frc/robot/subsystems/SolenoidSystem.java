@@ -9,13 +9,16 @@ import frc.robot.controls.OI;
 
 public class SolenoidSystem 
 {
-    private static final DoubleSolenoid SOLENOID = new DoubleSolenoid(0, 1);
+    private static final DoubleSolenoid SOLENOID1 = new DoubleSolenoid(0, 1);
+    private static final DoubleSolenoid SOLENOID2 = new DoubleSolenoid(2, 3);
+    private static boolean shiftSolenoid = false;
 
     // Send the solenoid forward
     public static void forward() 
     {
         // Set solenoid value
-        SOLENOID.set(DoubleSolenoid.Value.kForward);
+        SOLENOID1.set(DoubleSolenoid.Value.kForward);
+        SOLENOID2.set(DoubleSolenoid.Value.kForward);
     }
 
     // Send the solenoid in reverse
@@ -23,28 +26,30 @@ public class SolenoidSystem
     {
         // Set solenoid value
         Debug.printOnce("Reversed!");
-        SOLENOID.set(DoubleSolenoid.Value.kReverse);
+        SOLENOID1.set(DoubleSolenoid.Value.kReverse);
+        SOLENOID2.set(DoubleSolenoid.Value.kReverse);
     }
 
     private static boolean scanSolenoidButton() 
     {
-        if (OI.PNEU_BACKWARD_BUTTON.isPressed()) reverse();
-        if (OI.PNEU_FORWARD_BUTTON.isPressed()) forward();
-        if (OI.COLOR_STICK.getPOV() == 0)
-        {
-            Debug.printOnce(": " + OI.COLOR_STICK.getPOV());
-        } 
-        // if (OI.colorStick.getPOV() == 180) 
-        // {
-        //     Debug.printOnce(": " + OI.colorStick.getPOV());
-        //     SOLENOID_CONTROL_MOTOR.set(-.5);
-        // }
-        // if (OI.colorStick.getPOV() == -1) 
-        // {
-        //     Debug.printOnce(": " + OI.colorStick.getPOV());
-        //     SOLENOID_CONTROL_MOTOR.stopMotor();
-        // }
-
+        //in and out for intake system
+        if (OI.PNEU_CONTROL_BUTTON.isPressed()) {
+            shiftSolenoid = !shiftSolenoid;
+            if(shiftSolenoid) {
+                reverse();
+            } else {
+                forward();
+            }
+        }
+        //low high gear for shifting drive system
+        if (OI.PNEU_CONTROL_BUTTON2.isPressed()) {
+            shiftSolenoid = !shiftSolenoid;
+            if(shiftSolenoid) {
+                reverse();
+            } else {
+                forward();
+            }
+        }
         return false;
     }
 
