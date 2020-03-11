@@ -19,12 +19,12 @@ public class OI {
     public static final Button YELLOW_BUTTON = new Button(COLOR_STICK, 3);
     public static final Button GREEN_BUTTON = new Button(COLOR_STICK, 4);
     //Controls what the pneumatic control buttons control...
-    public static final Button NEXT_BUTTON = new Button(COLOR_STICK, 5);
-    public static final Trigger PREVIOUS_BUTTON = new Trigger(COLOR_STICK, 2);
-    public static final Button PNEU_FORWARD_BUTTON = new Button(COLOR_STICK, 6);
-    public static final Trigger PNEU_BACKWARD_BUTTON = new Trigger(COLOR_STICK, 3);
+    //public static final Button NEXT_BUTTON = new Button(COLOR_STICK, 5);
+    //public static final Trigger PREVIOUS_BUTTON = new Trigger(COLOR_STICK, 2);
+    public static final Button PNEU_CONTROL_BUTTON = new Button(LEFT_STICK, 3);//intake system
+    public static final Button PNEU_CONTROL_BUTTON2 = new Button(RIGHT_STICK, 3);//shifts high and low gear
 
-    public static final Button INTAKE_BUTTON = new Button(RIGHT_STICK, 2);
+    public static final Button INTAKE_BUTTON = new Button(RIGHT_STICK, 2);//turn on intake system
     public static final Button SHOOT_BUTTON = new Button(COLOR_STICK, 5);
 
     //Since index starts at 0, using the codes above as index needs to subtract 1.
@@ -34,10 +34,9 @@ public class OI {
         RED_BUTTON,
         YELLOW_BUTTON,
         GREEN_BUTTON,
-        NEXT_BUTTON,
-        PREVIOUS_BUTTON,
-        PNEU_FORWARD_BUTTON,
-        PNEU_BACKWARD_BUTTON,
+       // NEXT_BUTTON,
+        //PREVIOUS_BUTTON,
+        PNEU_CONTROL_BUTTON,
         SHOOT_BUTTON,
         INTAKE_BUTTON
     };
@@ -45,14 +44,14 @@ public class OI {
     //Getting the inputs of the joystick and update the variables
     public static void update()
     {
-        if (NEXT_BUTTON.isPressed)
-        {
-            ControlModule.changeMode(false);
-        }
-        else if (PREVIOUS_BUTTON.isPressed)
-        {
-            ControlModule.changeMode(true);
-        }
+        // if (NEXT_BUTTON.isPressed)
+        // {
+        //     ControlModule.changeMode(false);
+        // }
+        // else if (PREVIOUS_BUTTON.isPressed)
+        // {
+        //     ControlModule.changeMode(true);
+        // }
         //System.out.println(COLOR_STICK.getTrigger());
         for (int i = 0; i < buttons.length; i++) 
         {
