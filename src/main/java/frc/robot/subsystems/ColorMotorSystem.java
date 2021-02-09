@@ -68,7 +68,9 @@ public class ColorMotorSystem
             colorSelection = Colors.Yellow;
             return true;
         }
-        else if (OI.GREEN_BUTTON.isPressed()) 
+        // The below else if used to use GREEN_BUTTON, replaced with BOTTOM_RIGHT because 
+        // Green button reassigned to be used for pulling in pistons with intake system
+        else if (OI.BOTTOM_RIGHT.isPressed()) 
         {
             colorSelection = Colors.Green;
             return true;

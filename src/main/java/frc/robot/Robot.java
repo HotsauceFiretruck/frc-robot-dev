@@ -13,6 +13,7 @@ import frc.robot.subsystems.ShooterSystem;
 import frc.robot.subsystems.DriveSystem;
 import frc.robot.subsystems.SolenoidSystem;
 import frc.robot.subsystems.BrosiusIsAMotor;
+import frc.robot.subsystems.ConveyorSystem;
 
 /*
   The Robot Class.
@@ -44,6 +45,7 @@ public class Robot extends TimedRobot
     OI.update();
 
     DriveSystem.update();
+    ConveyorSystem.update();
     ShooterSystem.update();
     //objectDetectionSystem.update();
     bruhMomento.update();  

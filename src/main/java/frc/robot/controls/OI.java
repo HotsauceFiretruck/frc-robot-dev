@@ -10,22 +10,23 @@ import frc.robot.subsystems.ControlModule;
 public class OI {
 
     //Joystick takes in the port number? <-- Not very sure, ask the builders or even the instructors to know more.
-    public static final Joystick COLOR_STICK = new Joystick(2);
-    public static final Joystick LEFT_STICK = new Joystick(0);
-    public static final Joystick RIGHT_STICK = new Joystick(1);
+    public static final Joystick FARLEFT_STICK = new Joystick(0);
+    public static final Joystick LEFT_STICK = new Joystick(1);
+    public static final Joystick RIGHT_STICK = new Joystick(2);
 
-    public static final Button BLUE_BUTTON = new Button(COLOR_STICK, 1);
-    public static final Button RED_BUTTON = new Button(COLOR_STICK, 2);
-    public static final Button YELLOW_BUTTON = new Button(COLOR_STICK, 3);
-    public static final Button GREEN_BUTTON = new Button(COLOR_STICK, 4);
+    public static final Button BLUE_BUTTON = new Button(FARLEFT_STICK, 1);
+    public static final Button RED_BUTTON = new Button(FARLEFT_STICK, 2);
+    public static final Button YELLOW_BUTTON = new Button(FARLEFT_STICK, 3);
+    public static final Button BOTTOM_RIGHT = new Trigger(FARLEFT_STICK, 3);
     //Controls what the pneumatic control buttons control...
-    //public static final Button NEXT_BUTTON = new Button(COLOR_STICK, 5);
-    //public static final Trigger PREVIOUS_BUTTON = new Trigger(COLOR_STICK, 2);
-    public static final Button PNEU_CONTROL_BUTTON = new Button(LEFT_STICK, 3);//intake system
-    public static final Button PNEU_CONTROL_BUTTON2 = new Button(RIGHT_STICK, 3);//shifts high and low gear
-
-    public static final Button INTAKE_BUTTON = new Button(RIGHT_STICK, 2);//turn on intake system
-    public static final Button SHOOT_BUTTON = new Button(COLOR_STICK, 5);
+    // public static final Button NEXT_BUTTON = new Button(FARLEFT_STICK, 5);
+    // public static final Trigger PREVIOUS_BUTTON = new Trigger(FARLEFT_STICK, 2);
+    public static final Button PNEU_FORWARD_BUTTON = new Button(RIGHT_STICK, 1);
+    public static final Button PNEU_BACKWARD_BUTTON = new Button(LEFT_STICK, 1);
+  
+    public static final Button INTAKE_BUTTON = new Button(RIGHT_STICK, 2);
+    public static final Button SHOOT_BUTTON = new Button(LEFT_STICK, 2);
+    public static final Button BALL_BUTTON = new Button(FARLEFT_STICK, 14);
 
     //Since index starts at 0, using the codes above as index needs to subtract 1.
     private static Button[] buttons = new Button[]
@@ -33,12 +34,14 @@ public class OI {
         BLUE_BUTTON,
         RED_BUTTON,
         YELLOW_BUTTON,
-        GREEN_BUTTON,
-       // NEXT_BUTTON,
-        //PREVIOUS_BUTTON,
-        PNEU_CONTROL_BUTTON,
+        BOTTOM_RIGHT,
+        // NEXT_BUTTON,
+        // PREVIOUS_BUTTON,
+        PNEU_FORWARD_BUTTON,
+        PNEU_BACKWARD_BUTTON,
         SHOOT_BUTTON,
-        INTAKE_BUTTON
+        INTAKE_BUTTON,
+        BALL_BUTTON
     };
 
     //Getting the inputs of the joystick and update the variables
