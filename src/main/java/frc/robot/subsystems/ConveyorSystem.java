@@ -18,10 +18,11 @@ public class ConveyorSystem
             // turn on conveyor motor
             motor.set(1);
             System.out.println("Pushed conveyor button");
+        } else if(OI.BALLREVERSE_BUTTON.isHold()) {
+            motor.set(-1);
         }  else {
             // dont turn on motor
-            motor.set(.5);
-            System.out.println("not pressed");
+            motor.set(0);
         }
     }
 }
