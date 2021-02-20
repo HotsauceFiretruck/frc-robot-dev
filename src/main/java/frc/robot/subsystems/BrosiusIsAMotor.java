@@ -24,8 +24,8 @@ public class BrosiusIsAMotor {
   public void update() {
     //activates intake when pressed
     if (OI.INTAKE_BUTTON.isHold()) {
-      broMo.set(-.25);
-      broMo2.set(.25);
+      broMo.set(-.175);
+      broMo2.set(.175);
       System.out.println("intake button pressed");
     } else {
       broMo.set(0);

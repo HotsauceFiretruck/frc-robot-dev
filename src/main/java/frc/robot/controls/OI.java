@@ -24,7 +24,7 @@ public class OI {
     public static final Button INTAKE_BUTTON = new Button(FARLEFT_STICK, 2);
     public static final Button SHOOT_BUTTON = new Button(FARLEFT_STICK, 1);
     public static final Button BALL_BUTTON = new Button(FARLEFT_STICK, 14);
-    public static final Button BALLREVERSE_BUTTON = new Button(FARLEFT_STICK, 8);
+    public static final Button BALLREVERSE_BUTTON = new Button(FARLEFT_STICK, 13);
 
     //Since index starts at 0, using the codes above as index needs to subtract 1.
     private static Button[] buttons = new Button[]

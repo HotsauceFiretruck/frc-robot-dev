@@ -15,8 +15,8 @@ public class ShooterSystem
     {
         //actives shooter when trigger pulled
         if(OI.SHOOT_BUTTON.isHold()) {
-            spin2.set(.415);
-            spin1.set(-.415);
+            spin2.set(.435);
+            spin1.set(-.435);
             System.out.println("Shoot Button Pressed");
         }  else {
             spin1.stopMotor();
