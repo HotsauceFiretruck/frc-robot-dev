@@ -13,7 +13,7 @@ public class ConveyorSystem
 
     public static void update()
     {
-        //actives shooter when trigger pulled
+        //activates shooter when trigger pulled
         if(OI.BALL_BUTTON.isHold()) {
             // turn on conveyor motor
             motor.set(1);
