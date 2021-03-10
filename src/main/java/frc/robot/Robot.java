@@ -49,7 +49,7 @@ public class Robot extends TimedRobot
     ShooterSystem.update();
     //objectDetectionSystem.update();
     bruhMomento.update();  
-    SolenoidSystem.update();
+    // SolenoidSystem.update();
   }
 
 }

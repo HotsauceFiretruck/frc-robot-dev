@@ -9,20 +9,29 @@ public class ConveyorSystem
 {
     //initiates motor controls
     // private static final SpeedController spin1 = new PWMVictorSPX(5);
-    private static final SpeedController motor = new PWMVictorSPX(6);
+    private static final SpeedController conveyMotor = new PWMVictorSPX(6);
+    private static final SpeedController motor = new PWMVictorSPX(7);
 
     public static void update()
     {
+        if(OI.BALLPUSH.isHold()) {
+            System.out.println("Pushed flapper button");
+            motor.set(1);
+        } else if(OI.BALLREVERSE.isHold()) {
+            motor.set(-.5);
+        } else {
+            motor.set(0);
+        }
         //activates shooter when trigger pulled
         if(OI.BALL_BUTTON.isHold()) {
             // turn on conveyor motor
-            motor.set(1);
+            conveyMotor.set(1);
             System.out.println("Pushed conveyor button");
         } else if(OI.BALLREVERSE_BUTTON.isHold()) {
-            motor.set(-1);
+            conveyMotor.set(-1);
         }  else {
             // dont turn on motor
-            motor.set(0);
+            conveyMotor.set(0);
         }
     }
 }

@@ -29,13 +29,13 @@ public class OI {
     public static final Button BOTLEFT_MIDDLE = new Button(FARLEFT_STICK, 9);
     public static final Button BOTLEFT_LEFT = new Button(FARLEFT_STICK, 10);
 
-    public static final Button TOPRIGHT_RIGHT = new Button(FARLEFT_STICK, 11);
+    public static final Button BALLREVERSE = new Button(FARLEFT_STICK, 11);
     public static final Button TOPRIGHT_MIDDLE = new Button(FARLEFT_STICK, 12);
     public static final Button BALLREVERSE_BUTTON = new Button(FARLEFT_STICK, 13);
     
     public static final Button BALL_BUTTON = new Button(FARLEFT_STICK, 14);
     public static final Button BOTRIGHT_MIDDLE = new Button(FARLEFT_STICK, 15);
-    public static final Button BOTRIGHT_RIGHT = new Button(FARLEFT_STICK, 16);
+    public static final Button BALLPUSH = new Button(FARLEFT_STICK, 16);
 
     //Since index starts at 0, using the codes above as index needs to subtract 1.
     private static Button[] buttons = new Button[]
@@ -47,13 +47,15 @@ public class OI {
         BOTLEFT_MIDDLE,
         BOTLEFT_RIGHT,
         TOPRIGHT_MIDDLE,
-        TOPRIGHT_RIGHT,
+        BOTRIGHT_MIDDLE,
         PNEU_FORWARD_BUTTON,
         PNEU_BACKWARD_BUTTON,
         SHOOT_BUTTON,
         INTAKE_BUTTON,
         BALL_BUTTON,
-        BALLREVERSE_BUTTON
+        BALLREVERSE_BUTTON,
+        BALLPUSH,
+        BALLREVERSE
     };
 
     //Getting the inputs of the joystick and update the variables
