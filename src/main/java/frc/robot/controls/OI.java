@@ -21,7 +21,7 @@ public class OI {
     public static final Button PNEU_BACKWARD_BUTTON = new Button(FARLEFT_STICK, 4);
 
     // Declaring Layers of Buttons for the Joystick positioned to the far left of the driver station
-    public static final Button TOPLEFT_LEFT = new Button(FARLEFT_STICK, 5);
+    public static final Button INTAKE_REVERSE = new Button(FARLEFT_STICK, 5);
     public static final Button TOPLEFT_MIDDLE = new Button(FARLEFT_STICK, 6);
     public static final Button TOPLEFT_RIGHT = new Button(FARLEFT_STICK, 7);
 
@@ -40,7 +40,6 @@ public class OI {
     //Since index starts at 0, using the codes above as index needs to subtract 1.
     private static Button[] buttons = new Button[]
     {
-        TOPLEFT_LEFT,
         TOPLEFT_MIDDLE,
         TOPLEFT_RIGHT,
         BOTLEFT_LEFT,
@@ -52,6 +51,7 @@ public class OI {
         PNEU_BACKWARD_BUTTON,
         SHOOT_BUTTON,
         INTAKE_BUTTON,
+        INTAKE_REVERSE,
         BALL_BUTTON,
         BALLREVERSE_BUTTON,
         BALLPUSH,

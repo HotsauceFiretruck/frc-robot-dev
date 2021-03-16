@@ -27,6 +27,9 @@ public class BrosiusIsAMotor {
       broMo.set(-.15);
       broMo2.set(.30);
       System.out.println("intake button pressed");
+    } else if (OI.INTAKE_REVERSE.isHold()) {
+      broMo.set(.15);
+      broMo2.set(-.30);
     } else {
       broMo.set(0);
       broMo2.set(0);
